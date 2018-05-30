@@ -1,0 +1,68 @@
+@font-face {
+    font-family: SP Marker;
+    src: url("fonts/SP-Marker-Font.otf") format("opentyle");
+}
+
+/* body */
+ body {
+     font-family: 'SP Marker', 'Raleway', arial, sans-serif;
+     background-color: green;   
+     background-image: url("https://i.warosu.org/data/tg/img/0321/06/1400219320024.jpg");
+     background-size: cover;
+     color: red;
+     font-weight: 450;
+     margin: 0 auto;
+     text-align: center;
+     min-height: 100vh;
+     display: flex;
+     justify-content: stretch;
+ }
+
+ header {
+     margin: 0;
+ }
+  
+ main {
+     display: flex;
+     justify-content: space-around;
+ }
+
+ .left {
+     padding:  50px 0px 25px 20px;
+ }
+
+ .right {
+     padding: 50px 0px 25px 20px;
+ }
+
+ .end-messages {
+     position: absolute;
+     left: 50%;
+     top: 40%;
+ }
+
+ footer {
+     padding: 50px 20px;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ /* titles */
+
+ h1 {
+     font-size: 50px;
+     letter-spacing: 3px;
+     margin: 0;
+     padding: 20px;
+ }
+
+ h2 {
+     padding-top: 10px;
+     letter-spacing: 2px;
+     font-size: 40px;
+ }
+
+ ul {
+     margin: 0 auto;
+     padding: 0;
+     letter-spacing: 2px;
+ }
