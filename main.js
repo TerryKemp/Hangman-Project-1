@@ -126,3 +126,9 @@ function startGame () {
     $('.word').css('opacity', '1')
   }
 }
+
+// playAgain.on('click', function () { playAgain.css({ 'opacity': '0', 'cursor': 'default'}) })
+$('#play-again').on('click', replay)
+function replay () {
+  location.reload()
+}
