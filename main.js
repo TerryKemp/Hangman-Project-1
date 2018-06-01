@@ -28,19 +28,19 @@ function createLetters () {
   }
 }
 createLetters()
-/* topics */
+/* topics choices */
 
 var movies = ['die hard', 'the notebook', 'cat in the hat', 'the grinch who stole christmas']
 var songs = ['final countdown', 'the show must go on', 'we will rock you', 'banana pancakes']
 var books = ['the dove', 'hitchhikers guide to the galaxy', 'zathura', 'fiddler on the roof']
 
-var category = $('.cat')
+var category = $('.category')
 var categoryList
 var player = ' '
 var array = null
 var canvas = $('.word')
 
-/* action buttons */
+/* action buttons */ 
 category.on('click', startGame)
 category.on('click', makeWord)
 category.on('click', holder)
