@@ -16,9 +16,10 @@ function to play again
 /* why are you all over the place, organize your code and make it look neater
 check your functions to make sure they are good and work. once they work make them pretty
 stop second guessing how it is. */
+
 var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-function createLetters() {
+function createLetters () {
   for (var i = 0; i < letters.length; i++) {
     $('<div></div>').attr({
       'class': 'alph',
@@ -28,6 +29,7 @@ function createLetters() {
 }
 createLetters()
 /* topics */
+
 var movies = ['die hard', 'the notebook', 'cat in the hat', 'the grinch who stole christmas']
 var songs = ['final countdown', 'the show must go on', 'we will rock you', 'banana pancakes']
 var books = ['the dove', 'hitchhikers guide to the galaxy', 'zathura', 'fiddler on the roof']
@@ -44,7 +46,7 @@ category.on('click', makeWord)
 category.on('click', holder)
 
 /* creating word */
-function makeWord() {
+function makeWord () {
   canvas.html(' ')
   category.css('text-decoration', 'none')
   $(this).css('text-decoration', 'underline')
@@ -58,7 +60,7 @@ function makeWord() {
   }
 }
 
-function holder() {
+function holder () {
   array = player.split('')
   canvas.html('')
   for (let i = 0; i < array.length; i++) {
@@ -68,7 +70,7 @@ function holder() {
   }
 }
 
-function startGame() {
+function startGame () {
   var letter = $('.alph')
   var letterPick
   var allPicks = []
@@ -97,24 +99,23 @@ function startGame() {
     })
   })
 
-  function letterUsed() {
+  function letterUsed () {
     $(this).css({
       'opacity': '0.2',
       'cursor': 'auto'
     })
   }
 
-  function letterSelect() {
+  function letterSelect () {
     letterPick = $(this).attr('id')
   }
 
-  function list() {
+  function list () {
     allPicks.push(letterPick)
   }
 
-
   /* check right or wrong */
-  function checkPick() {
+  function checkPick () {
     if (array.includes(letterPick)) {
       right.push(letterPick)
     } else {
@@ -124,7 +125,8 @@ function startGame() {
   }
 
   /* show letters */
-  function reveal() {
+
+  function reveal () {
     correct = array.map((letter) => {
       if (allPicks.includes(letter)) {
         return letter
@@ -141,8 +143,8 @@ function startGame() {
       playAgain.text('play again')
     }
   }
-  /* show man on wrong */
-  function showMan() {
+  /* show man on wrong answer */
+  function showMan () {
     if (wrong.length === 1) {
       $('.head').removeClass('hidden')
     } else if (wrong.length === 2) {
@@ -167,7 +169,7 @@ function startGame() {
     }
   }
 
-  function showAnswer() {
+  function showAnswer () {
     canvas.text(player)
     $('.word').css('opacity', '1')
   }
@@ -175,6 +177,6 @@ function startGame() {
 
 $('#play-again').on('click', replay)
 
-function replay() {
+function replay () {
   location.reload()
 }
